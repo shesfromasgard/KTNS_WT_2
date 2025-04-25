@@ -161,13 +161,13 @@ int KTNS(vector<int> processos, bool debug = false) {
                 for (unsigned j = 0; j < m; ++j) {
                     if (carregadas[j] == 1 && magazine[j][i] != 1) {
                         if (prioridades[j][i] >= 0 && prioridades[j][i] > max) {
-                             max = prioridades[j][i];
-                             best = j;
+                            max = prioridades[j][i];
+                            best = j;
                         }
                     }
                 }
                 remove = best;
-                 if (debug && remove != -1) cout << "    Melhor candidata (prioridade máxima KTNS): Ferramenta " << remove << " (Prioridade: " << max << ")" << endl;
+                if (debug && remove != -1) cout << "    Melhor candidata (prioridade máxima KTNS): Ferramenta " << remove << " (Prioridade: " << max << ")" << endl;
             }
 
             if (remove != -1) {
@@ -193,9 +193,9 @@ int KTNS(vector<int> processos, bool debug = false) {
         }
 
         if (debug) {
-             cout << "  Estado final tarefa " << i << ": u=" << u << ", trocas=" << trocas << endl;
-             cout << "   Carregadas: "; for(int l : carregadas) cout << l << " "; cout << endl;
-             cout << "   Life:       "; for(int l : remainingLife) cout << l << " "; cout << endl;
+            cout << "  Estado final tarefa " << i << ": u=" << u << ", trocas=" << trocas << endl;
+            cout << "   Carregadas: "; for(int l : carregadas) cout << l << " "; cout << endl;
+            cout << "   Life:       "; for(int l : remainingLife) cout << l << " "; cout << endl;
         }
 
     }
